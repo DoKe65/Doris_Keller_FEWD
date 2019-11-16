@@ -1,0 +1,33 @@
+
+
+.my-projects figure {
+
+  position: relative;
+
+  & img {
+    max-width: 100%;
+    border: $aqua-forest 0.1em solid;
+    border-radius: $br--round;
+    height: 172px;
+    box-shadow: 0 0 24px 8px $color-accent;
+  }
+
+  & figcaption {
+    position: absolute;
+    bottom: 75%;
+    left: 45%;
+    width: 70%;
+    text-align: right;
+    background: $color-accent;
+    color: $white;
+    opacity: 0.9;
+    transform: rotate(-20deg);
+    padding-right: $indent;
+    border-left: $indent $aqua-forest solid;
+  }
+}
+
+#contact svg {
+  fill: $color-accent;
+  
+}

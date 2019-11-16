@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include flex($dir: column);
+  color: palette(black, light);
+  font-size: $base__font-size;
+  font-family: $font-family;
+  line-height: ($base__line/$base__font-size);
+  background-color: $black;
+}
+
+.wrapper {
+  margin: auto;
+  width: 100%;
+}
+
+a:active {
+  color: $black;
+}
+
+

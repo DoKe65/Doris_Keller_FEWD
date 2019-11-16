@@ -1,0 +1,26 @@
+// Section rules
+
+#profile  {
+  padding: $indent-lg 0;
+  background-image: linear-gradient($color-accent, #fdecab),
+  url("../img/dokel.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  & h2 {
+    margin: $indent;
+  }
+}
+
+.my-skills {
+  @include flex($dir: row, $just: space-between, $wrap: wrap);
+  & .fab,
+  & .fas {
+    color: $color-accent;
+    margin: $indent;
+  }
+
+}
+
+.my-projects {
+  @include flex($dir: column);
+}
