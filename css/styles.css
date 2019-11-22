@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Krub:300,400,700|Satisfy&display=swap");
-#top-nav li a:hover, h2 {
+#top-nav li a:hover, #top-nav li a .active, h2 {
   color: #fdecab;
   text-shadow: 1px 1px 0.5px red;
 }
@@ -372,8 +372,8 @@ body {
   width: 100%;
 }
 
-a:active {
-  color: #242121;
+a:visited {
+  color: #3f3939;
 }
 
 header {
@@ -393,10 +393,26 @@ section .my-skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media (min-width: 550px) {
+  section .my-skills {
+    grid-gap: 1.4rem;
+  }
+}
+@media (min-width: 550px) {
+  section .my-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 h2 {
   font-family: "Satisfy", Arial, sans-serif;
   font-size: 2em;
+}
+@media (min-width: 550px) {
+  h2 {
+    font-size: 3em;
+  }
 }
 
 h3, p {
@@ -411,7 +427,11 @@ nav {
   align-items: center;
   font-family: "Satisfy", Arial, sans-serif;
   background-color: #8dd490;
-  padding: 0.7rem;
+  padding: 0 1.4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 6rem;
 }
 
 @media (min-width: 550px) {
@@ -424,7 +444,7 @@ nav {
   width: 1.4rem;
   height: 1.4rem;
 }
-@media (min-width: 550px) {
+@media (min-width: 1024px) {
   .hamburger {
     display: none;
   }
@@ -438,7 +458,7 @@ nav {
 #top-nav {
   display: none;
 }
-@media (min-width: 550px) {
+@media (min-width: 1024px) {
   #top-nav {
     display: inline-block;
     width: 100%;
@@ -456,23 +476,45 @@ nav {
 }
 #profile {
   padding: 1.4rem 0;
+  margin: 0;
+  margin-top: 6rem;
   background-image: linear-gradient(#8dd490, #fdecab), url("../img/dokel.jpg");
   background-size: cover;
   background-blend-mode: multiply;
 }
+@media (min-width: 550px) {
+  #profile {
+    background-position: center;
+  }
+}
 #profile h2 {
   margin: 0.7rem;
 }
-
-.my-skills {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+@media (min-width: 550px) {
+  #profile h2 {
+    margin-top: 2.1rem;
+    font-size: 3.6rem;
+  }
 }
+@media (min-width: 550px) {
+  #profile h3 {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 550px) {
+  #profile p {
+    font-size: 1.4rem;
+  }
+}
+
 .my-skills .fab, .my-skills .fas {
   color: #8dd490;
   margin: 0.7rem;
+}
+@media (min-width: 550px) {
+  .my-skills .fab, .my-skills .fas {
+    font-size: 6rem;
+  }
 }
 
 .my-projects {

@@ -2,6 +2,9 @@ h2 {
   @extend %txt-shadow;
   font-family: $font-family--secondary;
   font-size: 2em;
+  @include mq(slmedium) {
+    font-size: 3em;
+  }
 }
 
 h3, p {

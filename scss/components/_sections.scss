@@ -2,21 +2,42 @@
 
 #profile  {
   padding: $indent-lg 0;
+  margin: 0;
+  margin-top: $col-height-xl;
   background-image: linear-gradient($color-accent, #fdecab),
   url("../img/dokel.jpg");
   background-size: cover;
   background-blend-mode: multiply;
+  @include mq(slmedium) {
+    background-position: center;
+  }
   & h2 {
     margin: $indent;
+    @include mq(slmedium) {
+      margin-top: $indent-xl;
+      font-size: $col-height-lg;
+    }
+  }
+  & h3 {
+    @include mq(slmedium) {
+      font-size: $indent-xl;
+    }
+  }
+  & p {
+    @include mq(slmedium) {
+      font-size: $indent-lg;
+    }
   }
 }
 
 .my-skills {
-  @include flex($dir: row, $just: space-between, $wrap: wrap);
   & .fab,
   & .fas {
     color: $color-accent;
     margin: $indent;
+    @include mq(slmedium) {
+      font-size: $col-height-xl;
+    }
   }
 
 }

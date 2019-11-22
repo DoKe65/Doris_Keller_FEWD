@@ -5,10 +5,19 @@ header {
 section {
   @include flex($dir: column, $algnI: center);
   margin: $indent;
+  
 
   & .my-skills {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    @include mq(slmedium) {
+      grid-gap: $indent-lg;
+    }
   }
-
+  & .my-projects {
+    @include mq(slmedium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }

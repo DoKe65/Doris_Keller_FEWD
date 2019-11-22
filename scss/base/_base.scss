@@ -16,6 +16,6 @@ body {
   width: 100%;
 }
 
-a:active {
-  color: $black;
+a:visited {
+  color: palette(black, light);
 }
