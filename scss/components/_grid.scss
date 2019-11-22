@@ -5,4 +5,10 @@ header {
 section {
   @include flex($dir: column, $algnI: center);
   margin: $indent;
+
+  & .my-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
 }

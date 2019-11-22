@@ -1,7 +1,7 @@
 h2 {
-  color: #fdecab;
-  text-shadow: 1px 1px 0.5px red;
-
+  @extend %txt-shadow;
+  font-family: $font-family--secondary;
+  font-size: 2em;
 }
 
 h3, p {

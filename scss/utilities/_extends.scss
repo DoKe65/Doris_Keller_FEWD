@@ -2,6 +2,11 @@
 // Placeholders
 // ==========================================================================
 
+%txt-shadow {
+  color: $yellow;
+  text-shadow: 1px 1px 0.5px red;
+}
+
 %input {
   width: 100%;
   height: $col-height;

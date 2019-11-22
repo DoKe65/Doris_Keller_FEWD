@@ -1,6 +1,7 @@
 // Navigation
 nav {
   @include flex($dir: row, $algnI: center, $just: space-between);
+  font-family: $font-family--secondary;
   background-color: $color-accent;
   padding: $indent;
 }
@@ -34,11 +35,17 @@ nav {
     width: 100%;
     // background-color: $color-secundary;
     margin-left: 0;
-    @include flex($dir: row);
+    @include flex($dir: row, $just: flex-end);
     max-width: 60%;
 
   }
-  // & li {
 
-  // }
+  & li {
+    font-size: 1.5em;
+    padding: $indent;
+
+    & a:hover {
+      @extend %txt-shadow;
+    }
+  }
 }

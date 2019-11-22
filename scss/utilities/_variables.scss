@@ -4,8 +4,9 @@
 
 // Font Stacks
 
-$font-url--google : "https://fonts.googleapis.com/css?family=Krub:300,400,700";
-$font-family      : "Krub", Arial, sans-serif;
+$font-url--google : "https://fonts.googleapis.com/css?family=Krub:300,400,700|Satisfy&display=swap";
+$font-family--primary  : "Krub", Arial, sans-serif;
+$font-family--secondary: "Satisfy", Arial, sans-serif;
 
 // Font Weights
 
@@ -22,6 +23,7 @@ $ship-cove    : #7477BF;
 $mulled-wine  : #4D4C72;
 $feijoa       : #8dd490;
 $aqua-forest  : #5e9f61;
+$yellow: #fdecab;
 
 // Color Usage
 

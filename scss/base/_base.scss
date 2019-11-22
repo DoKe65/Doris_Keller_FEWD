@@ -6,7 +6,7 @@ body {
   @include flex($dir: column);
   color: palette(black, light);
   font-size: $base__font-size;
-  font-family: $font-family;
+  font-family: $font-family--primary;
   line-height: ($base__line/$base__font-size);
   background-color: $black;
 }
@@ -19,5 +19,3 @@ body {
 a:active {
   color: $black;
 }
-
-
