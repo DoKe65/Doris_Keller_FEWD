@@ -3,10 +3,7 @@
   background-image: linear-gradient($yellow, $yellow, darken($yellow, 10%), lighten($black,10%));
   width: 100%;
   @include mq(large) {
-
     height: $col-height-lg;
-
-
   }
   &-2 {
     height: $col-height;
@@ -19,7 +16,18 @@
       max-width: 1200px;
       margin: auto;
     }
+  }
+}
 
+#profile img {
+  display: none;
+  @include mq(large) {
+    display: inline-flex;
+    width: $col-height-xxl * 2;
+    margin-right: $col-height-xl;
+    margin-left: $indent-lg;
+    box-shadow: 1px 0px 20px 4px $color-accent;
+    border-radius: 50% 10px;
   }
 }
 

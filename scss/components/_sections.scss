@@ -27,15 +27,7 @@
 
     // background-image: linear-gradient($color-accent, #fdecab);
   }
-  & img {
-    display: none;
-    @include mq(large) {
-      display: inline-flex;
-      width: $col-height-xxl * 2;
-      margin-right: $col-height-xl;
-      margin-left: $indent-lg;
-    }
-  }
+
   & .description {
     display: flex;
     flex-direction: column;
