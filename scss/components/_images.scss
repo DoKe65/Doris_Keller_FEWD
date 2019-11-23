@@ -1,4 +1,27 @@
+.separation {
+  height: $indent;
+  background-image: linear-gradient($yellow, $yellow, darken($yellow, 10%), lighten($black,10%));
+  width: 100%;
+  @include mq(large) {
 
+    height: $col-height-lg;
+
+
+  }
+  &-2 {
+    height: $col-height;
+    background-image: linear-gradient(lighten($black, 10%), darken($yellow, 10%), $yellow, $yellow, darken($yellow, 10%), lighten($black,10%));
+    width: 100%;
+    height: $indent-lg;
+    @include mq(large) {
+      height: $col-height;
+      border-radius: 10px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+  }
+}
 
 .my-projects figure {
 
@@ -29,5 +52,5 @@
 
 #contact svg {
   fill: $color-accent;
-  
+
 }

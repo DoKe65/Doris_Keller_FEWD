@@ -1,6 +1,8 @@
 // Section rules
 
 #profile  {
+  display: flex;
+  flex-direction: row;
   padding: $indent-lg 0;
   margin: 0;
   margin-top: $col-height-xl;
@@ -8,24 +10,76 @@
   url("../img/dokel.jpg");
   background-size: cover;
   background-blend-mode: multiply;
+  height: $col-height-xxl;
+  background-position: center;
   @include mq(slmedium) {
-    background-position: center;
+    height: $col-height-xxl * 2;
+  }
+  @include mq(large) {
+    width: 100%;
+    max-width: 1200px;
+    // background-position: left;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    // background-image: linear-gradient($color-accent, #fdecab);
+  }
+  & img {
+    display: none;
+    @include mq(large) {
+      display: inline-flex;
+      width: $col-height-xxl * 2;
+      margin-right: $col-height-xl;
+      margin-left: $indent-lg;
+    }
+  }
+  & .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: $indent-lg;
+    justify-content: space-around;
+    height: inherit;
+    @include mq(large) {
+      align-items: flex-start;
+    }
   }
   & h2 {
-    margin: $indent;
+    margin: 0;
     @include mq(slmedium) {
       margin-top: $indent-xl;
       font-size: $col-height-lg;
     }
+    @include mq(large) {
+      align-self: center;
+    }
   }
   & h3 {
+    margin: 0;
+    @extend %txt-shadow;
     @include mq(slmedium) {
+
+      font-size: $indent-lg;
+
+    }
+    @include mq(large) {
       font-size: $indent-xl;
     }
   }
   & p {
+    margin: 0;
+    font-weight: 700;
     @include mq(slmedium) {
       font-size: $indent-lg;
+
+    }
+    @include mq(large) {
+      color: darken($color-accent, 30%);
+      align-self: flex-end;
     }
   }
 }

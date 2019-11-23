@@ -1,23 +1,37 @@
 header {
   @include flex($dir: column);
+  background-color: $color-accent;
+  background-image: linear-gradient($color-accent, $color-accent, #fdecab);
 }
 
 section {
   @include flex($dir: column, $algnI: center);
   margin: $indent;
-  
+  @include mq(large) {
+    margin-bottom: $col-height-xl;
+  }
 
+
+  & #profile {
+    margin-bottom: 0;
+  }
   & .my-skills {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     @include mq(slmedium) {
       grid-gap: $indent-lg;
+    }
+    @include mq(large) {
+      grid-template-columns: repeat(6, 1fr);
     }
   }
   & .my-projects {
     @include mq(slmedium) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq(large) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

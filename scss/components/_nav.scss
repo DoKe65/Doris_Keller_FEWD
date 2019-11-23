@@ -1,18 +1,28 @@
 // Navigation
-nav {
-  @include flex($dir: row, $algnI: center, $just: space-between);
-  font-family: $font-family--secondary;
+#top {
   background-color: $color-accent;
-  padding: 0 $indent-lg;
-  position: fixed;
   width: 100%;
   z-index: 1;
   height: $col-height-xl;
+  position: fixed;
+  @include mq(slmedium) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-#top {
-  @include mq(slmedium) {
-  max-width: 50%;
+nav {
+  @include flex($dir: row, $algnI: center, $just: space-between);
+  font-family: $font-family--secondary;
+  padding: 0 $indent-lg;
+  // position: fixed;
+  width: 100%;
+  // z-index: 1;
+  // height: $col-height-xl;
+  // background-color: $color-accent;
+  @include mq(large) {
+    max-width: 1200px;
+    margin: auto;
   }
 }
 
