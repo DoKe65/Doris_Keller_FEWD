@@ -12,5 +12,8 @@ h3, p {
   &.copyright {
     align-self: center;
     @extend %txt-shadow;
+    @include mq(large) {
+      margin-left: $indent;
+    }
   }
 }

@@ -40,9 +40,10 @@ section {
 
 footer {
   margin-top: $indent-lg;
-  @include flex($just: space-around);
+  @include flex($dir: column);
   max-width: 100%;
   @include mq(large){
+    flex-direction: row;
     justify-content: space-between;
     max-width: 1200px;
     margin: $indent-lg auto;

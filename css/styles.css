@@ -439,13 +439,13 @@ section .my-skills {
 footer {
   margin-top: 1.4rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-around;
   max-width: 100%;
 }
 @media (min-width: 1024px) {
   footer {
+    flex-direction: row;
     justify-content: space-between;
     max-width: 1200px;
     margin: 1.4rem auto;
@@ -467,6 +467,11 @@ h3, p {
 }
 h3.copyright, p.copyright {
   align-self: center;
+}
+@media (min-width: 1024px) {
+  h3.copyright, p.copyright {
+    margin-left: 0.7rem;
+  }
 }
 
 #top {
