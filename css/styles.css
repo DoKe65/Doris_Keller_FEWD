@@ -429,6 +429,20 @@ section .my-skills {
   }
 }
 
+footer {
+  margin-top: 1.4rem;
+  display: flex;
+  max-width: 100%;
+  justify-content: space-around;
+}
+@media (min-width: 1024px) {
+  footer {
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 1.4rem auto;
+  }
+}
+
 h2 {
   font-family: "Satisfy", Arial, sans-serif;
   font-size: 2em;
@@ -607,6 +621,20 @@ nav {
   flex-wrap: nowrap;
 }
 
+#contact {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  #contact ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+#contact ul li {
+  margin: 0.7rem 1.4rem;
+}
+
 .separation {
   height: 0.7rem;
   background-image: linear-gradient(#fdecab, #fdecab, #fce179, #3f3939);
@@ -674,9 +702,23 @@ nav {
   fill: #8dd490;
 }
 
-#social svg {
+.social-icon svg {
   fill: white;
-  height: auto;
+  width: 80px;
+  height: 60px;
+  margin: 0;
+}
+
+#linkedin,
+#twitter {
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: 20px;
+  height: 120px;
+}
+
+#twitter {
+  fill: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

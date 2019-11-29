@@ -63,8 +63,21 @@
 
 }
 
-#social svg {
+.social-icon svg {
   fill: white;
-  
-  height: auto;
+  width: 80px;
+  height: 60px;
+  margin: 0;
+}
+
+#linkedin,
+#twitter {
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: 20px;
+  height: 120px;
+}
+
+#twitter {
+  fill: black;
 }

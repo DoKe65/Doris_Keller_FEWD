@@ -35,3 +35,15 @@ section {
     }
   }
 }
+
+footer {
+  margin-top: $indent-lg;
+  display: flex;
+  max-width: 100%;
+  justify-content: space-around;
+  @include mq(large){
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: $indent-lg auto;
+  }
+}
