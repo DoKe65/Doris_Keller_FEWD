@@ -91,3 +91,14 @@
 .my-projects {
   @include flex($dir: column);
 }
+
+// #social {
+//   display: flex;
+//   flex-direction: row;
+//   min-width: 300px;
+//   max-width: 100%;
+//   height: 100px;
+//   & p {
+//     flex-grow: 100;
+//   }
+// }

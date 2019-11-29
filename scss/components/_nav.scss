@@ -2,9 +2,9 @@
 #top {
   background-color: $color-accent;
   width: 100%;
+  position: fixed;
   z-index: 1;
   height: $col-height-xl;
-  position: fixed;
   @include mq(slmedium) {
     display: flex;
     justify-content: center;
