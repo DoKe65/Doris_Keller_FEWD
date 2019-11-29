@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Krub:300,400,700|Satisfy&display=swap");
-#profile h3, #top-nav li a:hover, #top-nav li a .active, h2 {
+#profile h3, #top-nav li a:hover, #top-nav li a .active, h3.copyright, p.copyright, h2 {
   color: #fdecab;
   text-shadow: 1px 1px 0.5px red;
 }
@@ -406,6 +406,9 @@ section #profile {
 section .my-skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  align-items: stretch;
+  justify-items: center;
 }
 @media (min-width: 550px) {
   section .my-skills {
@@ -421,23 +424,29 @@ section .my-skills {
   section .my-projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    align-items: stretch;
+    justify-items: center;
   }
 }
 @media (min-width: 1024px) {
   section .my-projects {
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2.1rem;
   }
 }
 
 footer {
   margin-top: 1.4rem;
   display: flex;
-  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-around;
+  max-width: 100%;
 }
 @media (min-width: 1024px) {
   footer {
-    justify-content: flex-end;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 1.4rem auto;
   }
@@ -455,6 +464,9 @@ h2 {
 
 h3, p {
   color: #8dd490;
+}
+h3.copyright, p.copyright {
+  align-self: center;
 }
 
 #top {
@@ -525,6 +537,7 @@ nav {
 #profile {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   padding: 1.4rem 0;
   margin: 0;
   margin-top: 6rem;
@@ -551,10 +564,11 @@ nav {
 #profile .description {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 1.4rem;
-  justify-content: space-around;
   height: inherit;
 }
 @media (min-width: 1024px) {
@@ -628,6 +642,7 @@ nav {
   #contact ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-around;
   }
 }
@@ -635,6 +650,14 @@ nav {
   margin: 0.7rem 1.4rem;
 }
 
+.social {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  max-width: 100%;
+}
 .separation {
   height: 0.7rem;
   background-image: linear-gradient(#fdecab, #fdecab, #fce179, #3f3939);

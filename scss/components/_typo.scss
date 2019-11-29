@@ -9,4 +9,8 @@ h2 {
 
 h3, p {
   color: $color-accent;
+  &.copyright {
+    align-self: center;
+    @extend %txt-shadow;
+  }
 }
