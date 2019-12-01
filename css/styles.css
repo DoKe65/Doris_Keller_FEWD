@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Krub:300,400,700|Satisfy&display=swap");
 #profile h3, #top-nav li a:hover, #top-nav li a .active, h3.copyright, p.copyright, h2 {
-  color: #fdecab;
+  color: #efd46b;
   text-shadow: 1px 1px 0.5px red;
 }
 
@@ -385,7 +385,7 @@ header {
   flex-direction: column;
   flex-wrap: nowrap;
   background-color: #8dd490;
-  background-image: linear-gradient(#8dd490, #8dd490, #fdecab);
+  background-image: linear-gradient(#8dd490, #8dd490, #efd46b);
 }
 
 section {
@@ -665,7 +665,7 @@ nav {
 }
 .separation {
   height: 0.7rem;
-  background-image: linear-gradient(#fdecab, #fdecab, #fce179, #3f3939);
+  background-image: linear-gradient(#efd46b, #efd46b, #f9efc7, #eac73d, #3f3939);
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -675,7 +675,7 @@ nav {
 }
 .separation-2 {
   height: 2.4rem;
-  background-image: linear-gradient(#3f3939, #fce179, #fdecab, #fdecab, #fce179, #3f3939);
+  background-image: linear-gradient(#3f3939, #eac73d, #f9efc7, #efd46b, #eac73d, #3f3939);
   width: 100%;
   height: 1.4rem;
 }

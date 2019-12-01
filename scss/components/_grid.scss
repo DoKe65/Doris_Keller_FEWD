@@ -1,7 +1,7 @@
 header {
   @include flex($dir: column);
   background-color: $color-accent;
-  background-image: linear-gradient($color-accent, $color-accent, #fdecab);
+  background-image: linear-gradient($color-accent, $color-accent, $yellow);
 }
 
 section {

@@ -44,6 +44,7 @@
   & h3 {
     margin: 0;
     @extend %txt-shadow;
+    // color: darken($color-accent, 30%);
 
     @include mq(slmedium) {
       font-size: $indent-lg;
