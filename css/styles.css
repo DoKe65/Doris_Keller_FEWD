@@ -684,7 +684,7 @@ nav {
     height: 2.4rem;
     border-radius: 10px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
   }
 }
 

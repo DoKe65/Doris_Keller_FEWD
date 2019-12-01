@@ -10,6 +10,12 @@ section {
   @include mq(large) {
     margin-bottom: $col-height-xl;
   }
+  // &::before {
+  //   display: block;
+  //   content: "";
+  //   height: $col-height-xl;
+  //   margin: -50px 0 0;
+  // }
 
 
   & #profile {
