@@ -7,6 +7,14 @@
 $font-url--google : "https://fonts.googleapis.com/css?family=Krub:300,400,700|Satisfy&display=swap";
 $font-family--primary  : "Krub", Arial, sans-serif;
 $font-family--secondary: "Satisfy", Arial, sans-serif;
+@font-face {
+  font-family: "Source Code Pro";
+  src:
+  url("../font/SourceCodePro-Regular-modified.otf") ;
+}
+
+$font-family--code: "Source Code Pro";
+
 
 // Font Weights
 
@@ -23,7 +31,6 @@ $ship-cove    : #7477BF;
 $mulled-wine  : #4D4C72;
 $feijoa       : #8dd490;
 $aqua-forest  : #5e9f61;
-// $yellow: #fdecab;
 $yellow: #efd46b;
 
 // Color Usage
@@ -90,13 +97,6 @@ $br--green-fine: 1px solid $feijoa;
 // Transitions
 
 $trns-duration: .5s;
-
-// Path to Assets
-
-$path--rel-img: "../images";
-$path--rel-svg: "../sprite";
-
-$arrow: url("../images/select.png");
 
 // breakpoints
 $brkpoint-sm: 1px;

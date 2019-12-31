@@ -12,7 +12,7 @@
     <header>
     <div id="top">
       <nav>
-        <h1 class="name">Doris Keller</h1>
+        <h1 class="name"><a href="#profile">Doris Keller</a></h1>
         <div class="hamburger">
           <div class="line"></div>
           <div class="line"></div>
@@ -31,24 +31,38 @@
     <section id="profile">
       <img src="img/dokel.jpg" alt="Photo of Doris Keller">
       <aside class="description">
-        <h2 class="eyecatcher-first">Doris Keller</h2>
-        <h3 class="eycatcher-role">Frontend Web Developer</h3>
-        <p class="eycatcher-second">Creating websites is my passion!</p>
+        <h2 class="name">Doris Keller</h2>
+        <h3 class="role">Frontend Web Developer</h3>
+        <p class="passion">Creating websites is my passion!</p>
       </aside>
     </section>
+    <article id="about">
+      <h3>About me</h3>
+      <p>
+        Since I put my hands on the keyboard of my former boyfriends C64 in the 80's, my interest to learn to code was growing steadily. I had the chance to pick up on it when I worked at my brother's computer shop, solding Atari computer - it was an awesome time!
+      </p>
+      <p>
+        But live get's in the way sometimes, I had my daughter, kept the household and worked part time in a toy shop and a copy center, helped by my wonderful parents and in-laws, later I changed my job to be more close to my family to a former client of my brothers and the copy shop (belonging to my sister and brother in law), and I'm working there since almost 20 years now, layouting, printing and shipping educational books about MS Office programs (www.wings.ch).
+      </p>
+      <p>
+        My daughter is grown and out the house now and my husband works irregular shifts - so when learn to code if not yet? In Team Treehouse's online courses I found the right place to do it - in combination with a lot of other resources, but I always turned back to them. After about 5 years dabbling and learning a bit of that and a bit of this, I decided it was time to get serieous - I enrolled in Team Treehouse's techdegree, and won't never regret that decision!
+      </p>
+      <p>
+        Their FEWD techndegree was exactly what I needed: There's a path, devided in 9 units, each unit with a final project, graded by moderators or our peers, and there's the slack channel! Learning online with the possiblilities to chat with fellow students, get help, or help in turn, doing peer reviews (we can do that after we passed the first three units, and only those we already did too), became almost an addiction! I was so fascinated by what we can learn by helping each other, that I was (and still am) trying to be there as much as I could and my time allows it. So I became a Slack Champion, which was huge for me! Never thought that an online course could be so extremely personal! Thank you for all that and the exceptional experience! You all made a difference in my life!</p>
+    </article>
     </header>
-    <div class="separation"></div>
+    <div class="separation"><button id="more">more</button></div>
     <main>
 
       <section id="skills">
         <h2>My Skills</h2>
         <article class="my-skills">
-          <i class="fab fa-html5 fa-4x"></i>
-          <i class="fab fa-css3 fa-4x"></i>
-          <i class="fab fa-sass fa-4x"></i>
-          <i class="fab fa-git fa-4x"></i>
-          <i class="fab fa-js-square fa-4x"></i>
-          <i class="fas fa-graduation-cap fa-4x"></i>
+          <div class="skill"><i class="fab fa-html5 fa-4x"><span>HTML5 - The "must-know" for every web developer. The hypertext markup language is what gives a webpages it's structure.</span></i></div>
+          <i class="fab fa-css3 fa-4x"><span>CSS3 allows us to style the elements on a webpage.</span></i>
+          <i class="fab fa-sass fa-4x"><span>Sass (less or scss) is a CSS preprocessor, which allows us to make the creation of stylesheets for our webpages more modular and reusable.</span></i>
+          <i class="fab fa-git fa-4x"><span>git is a version control system, that allows us - among other nice things - to keep track of the modifications in our code, by allowing to create branches, where the code can be modificated and tested without touching the original code, before merging it into the "working" version.</span></i>
+          <i class="fab fa-js-square fa-4x"><span>JavaScript is what adds interactivity to a webpage, like triggering an action when pressing a button.</span></i>
+          <i class="fas fa-graduation-cap fa-4x"><span>I LOVE to learn - period!</span></i>
         </article>
       </section>
         <div class="separation-2"></div>
@@ -128,9 +142,8 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="js/app.js">
-
-    </script>
+    <script type="text/javascript" src="js/intro.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </div>
 </body>
 </html>

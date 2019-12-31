@@ -2,6 +2,7 @@
   height: $indent;
   background-image: linear-gradient($yellow, $yellow, lighten($yellow, 20%), darken($yellow, 10%), lighten($black,10%));
   width: 100%;
+  text-align: center;
   @include mq(large) {
     height: $col-height-lg;
   }

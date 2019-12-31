@@ -43,7 +43,8 @@ let lastId;
 let cur = [];
 
 window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY + 100;
+  let fromTop = window.scrollY + 140;
+  let fromBottom = window.scrollY
 
   mainNavLinks.forEach(link => {
     let section = document.querySelector(link.hash);
@@ -62,8 +63,8 @@ window.addEventListener("scroll", event => {
     } else {
       if (
         section.offsetTop <= fromTop &&
-        section.offsetTop + section.offsetHeight + 50 > fromTop ||
-        (window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        (window.innerHeight + window.scrollY) >= document.body.offsetHeight
+      ) {
         li.classList.add("active");
       } else {
         li.classList.remove("active");
@@ -72,7 +73,6 @@ window.addEventListener("scroll", event => {
 
   });
 });
-
 
 // Jump without covering section title
 
@@ -108,18 +108,13 @@ document.addEventListener("click", (e) => {
 // Skills section
 // ================================
 
-const skillsDescription = document.querySelectorAll("i span");
+const skillsDescription = {
+  html: 'HTML5 - The "must-know" for every web developer. The hypertext markup language is what gives a webpages elements a structure.',
+  css: 'CSS3 allows us to style the elements on a webpage.',
+  sass: 'Sass (less or scss) is a CSS preprocessor, which allows us to make the creation of stylesheets for our webpages more modular and reusable.',
+  git: 'git is a version control system, that allows us - among other nice things - to keep track of the modifications in our code, by allowing to create branches, where the code can be modificated and tested without touching the original code, before merging it into the "working" version.',
+  js: 'JavaScript is what adds interactivity to a webpage, like triggering an action when pressing a button.',
+  learn: 'I LOVE to learn - period!'
+};
 
-skills.addEventListener("click", (e) => {
-  if (e.target.classList.contains("fab") || e.target.classList.contains("fas")) {
-    let span = e.target.firstChild;
-    span.style.visibility = "visible";
-  }
-});
-
-skills.addEventListener("click", (e) => {
-  if (e.target.tagName === "SPAN") {
-    let span = e.target;
-    span.style.visibility = "hidden";
-  }
-});
+let descriptionDiv = document.createElement("span");

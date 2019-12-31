@@ -31,7 +31,7 @@
       align-items: flex-start;
     }
   }
-  & h2 {
+  & .name {
     margin: 0;
     @include mq(slmedium) {
       margin-top: $indent-xl;
@@ -41,10 +41,9 @@
       align-self: center;
     }
   }
-  & h3 {
+  & .role {
     margin: 0;
     @extend %txt-shadow;
-    // color: darken($color-accent, 30%);
 
     @include mq(slmedium) {
       font-size: $indent-lg;
@@ -55,7 +54,7 @@
     }
   }
 
-  & p {
+  & .passion {
     margin: 0;
     font-weight: 700;
     @include mq(slmedium) {
@@ -69,16 +68,48 @@
   }
 }
 
+#more {
+  background-color: transparent;
+  border: none;
+  padding: 1.6em 2em;
+  font-size: 1.5em;
+  color: #6b6868;
+  text-shadow: 2px 2px 2px $yellow;
+  line-height: 0.5em;
+
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
+}
+
+
 .my-skills {
   & .fab,
   & .fas {
     color: $color-accent;
-    margin: $indent;
+    padding: $indent;
     @include mq(slmedium) {
       font-size: $col-height-xl;
+      cursor: pointer;
     }
   }
-
+  & i span {
+    visibility: hidden;
+    position: absolute;
+    width:10em;
+    min-height: $col-height-xl;
+    color: darken($aqua-forest, 30%);
+    background-color: lighten($feijoa, 20%);
+    opacity: 95%;
+    border-radius: $indent;
+    font-family: $font-family--primary;
+    font-size:0.2em;
+    text-align: center;
+    padding:5px 8px;
+    margin-left: -7.5em;
+  }
 }
 
 .my-projects {
@@ -104,8 +135,5 @@
   @include flex($just: space-around);
   max-width: 100%;
   @include mq(large){
-    // justify-content: flex-end;
-    // max-width: 1200px;
-    // margin: $indent-lg auto;
   }
 }

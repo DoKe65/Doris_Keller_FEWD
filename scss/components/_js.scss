@@ -1,0 +1,46 @@
+// ===================================
+// Styles used and added by javascript
+// ===================================
+
+// intro modal
+
+#intro-modal {
+  font-family: $font-family--code;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $black;
+}
+
+#typewriter {
+  font-size: 1em;
+  margin: 0;
+  font-family: $font-family--code;
+  color: $white;
+
+  &:after {
+    content: "|";
+    animation: blink 500ms linear infinite alternate;
+  }
+}
+
+@keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  transition-delay: 10000ms;
+  transition: opacity 2000ms ease-in;
+}

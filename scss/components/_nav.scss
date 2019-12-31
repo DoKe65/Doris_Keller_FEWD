@@ -15,11 +15,7 @@ nav {
   @include flex($dir: row, $algnI: center, $just: space-between);
   font-family: $font-family--secondary;
   padding: 0 $indent-lg;
-  // position: fixed;
   width: 100%;
-  // z-index: 1;
-  // height: $col-height-xl;
-  // background-color: $color-accent;
   @include mq(large) {
     max-width: 1200px;
     margin: auto;
@@ -57,7 +53,7 @@ nav {
     padding: $indent;
 
     & a:hover,
-    & a .active {
+    &.active a {
       @extend %txt-shadow;
     }
   }

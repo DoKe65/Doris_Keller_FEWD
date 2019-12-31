@@ -1,0 +1,17 @@
+// =======================
+// articles
+// =======================
+
+#about {
+  display: none;
+  width: 70%;
+  max-width: 1000px;
+  margin: auto;
+  & h3 {
+    @extend %txt-shadow;
+  }
+
+  & p {
+    color: $black;
+  }
+}
