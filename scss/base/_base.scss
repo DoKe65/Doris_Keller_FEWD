@@ -16,6 +16,10 @@ body {
   width: 100%;
 }
 
+a {
+  color: palette(black, light);
+}
+
 a:visited {
   color: inherit;
 

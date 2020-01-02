@@ -388,6 +388,10 @@ body {
   width: 100%;
 }
 
+a {
+  color: #3f3939;
+}
+
 a:visited {
   color: inherit;
 }
@@ -839,13 +843,9 @@ nav {
   padding: 0.7rem;
   border-radius: 5px;
 }
-.proj-fig details[open] summary {
-  list-style-image: url("../img/pointer.svg");
-}
 .proj-fig details summary {
   color: #253f26;
   font-weight: 700;
-  list-style-image: url("../img/pointer.svg");
   text-shadow: 1px 1px 0 #f1f1f1;
 }
 .proj-fig details summary:focus {

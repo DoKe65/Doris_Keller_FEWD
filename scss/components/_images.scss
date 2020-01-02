@@ -74,16 +74,11 @@
       padding: $indent;
       border-radius: $br--default;
 
-      & summary {
-        list-style-image: url("../img/pointer.svg");
-      }
     }
 
     & summary {
       color: darken($aqua-forest, 30%);
       font-weight: $font-weight--bold;
-      // list-style: none;
-      list-style-image: url("../img/pointer.svg");
       text-shadow: 1px 1px 0 $white;
       &:focus {
         outline: none;
