@@ -3,52 +3,19 @@
 // ==========================================================================
 
 %txt-shadow {
-  color: $yellow;
-  text-shadow: 1px 1px 0.5px red;
-}
-
-%input {
-  width: 100%;
-  height: $col-height;
-  border-radius: $br--default;
-  border: 1px solid $color-primary;
-  background-color: $white;
-  margin: $indent 0;
-  padding: $indent;
+  color: $color-accent;
+  text-shadow: 1px 1px 0.5px $red;
 }
 
 %btn {
-  @extend %input;
-  background-color: $color-primary;
+  width: 100%;
+  border-radius: $br--default;
+  margin: $indent;
+  padding: $indent;
+  border: none;
+  background-color: $aqua-forest;
   color: $white;
   cursor: pointer;
-  text-transform: uppercase;
-}
-
-%widget {
-  padding: $indent 0;
-  border-top: $br--blue;
-  border-bottom: $br--blue;
-  width: 85%;
-  max-width: 85%;
-  @include mq(slmedium) {
-  @include flex($just: space-between, $wrap: wrap);
-    padding: $indent-lg 0;
-  }
-}
-%left {
-  @include mq(medium) {
-  justify-self: right;
-  padding-right: $indent;
-  }
-}
-
-%right {
-  @include mq(medium) {
-    justify-self: left;
-    padding-left: $indent;
-    border-left: $br--blue;
-  }
 }
 
 %img {
@@ -57,70 +24,5 @@
   border-radius: $br--round;
   &:hover {
     transform: scale(1.5);
-  }
-}
-
-%slider {
-  /* The switch - the box around the slider */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: $col-height-lg * 1.5;
-    height: 34px;
-  }
-
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: palette(color-primary, xx-light);
-    transition: .4s;
-    border-radius: 34px;
-    padding-left: 10px;
-    color: $color-primary;
-    text-transform: uppercase;
-    font-size: 0;
-    padding-top: 13px;
-  }
-
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-  }
-
-  input:checked + .slider {
-    background-color: $color-primary;
-    color: $white;
-    text-transform: uppercase;
-    font-weight: $font-weight--bold;
-    letter-spacing: 2px;
-    font-size: $base__font-size;
-    padding-top: 5px;
-  }
-
-  input:focus + .slider {
-    transition: background-color $trns-duration;
-  }
-
-  input:checked + .slider:before {
-    transform: translateX(3.2rem);
   }
 }

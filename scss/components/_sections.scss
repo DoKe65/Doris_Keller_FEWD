@@ -1,11 +1,15 @@
+// ==============
 // Section rules
+// ==============
+
+// Profile section
 
 #profile  {
   @include flex();
   padding: $indent-lg 0;
   margin: 0;
   margin-top: $col-height-xl;
-  background-image: linear-gradient($color-accent, #fdecab),
+  background-image: linear-gradient($feijoa, #fdecab),
   url("../img/dokel.jpg");
   background-size: cover;
   background-blend-mode: multiply;
@@ -62,21 +66,38 @@
     }
 
     @include mq(large) {
-      color: darken($color-accent, 30%);
+      color: darken($feijoa, 30%);
       align-self: flex-end;
     }
   }
 }
 
-#more {
-  background-color: transparent;
-  border: none;
-  padding: 1.6em 2em;
-  font-size: 1.5em;
-  color: #6b6868;
-  text-shadow: 2px 2px 2px $yellow;
-  line-height: 0.5em;
+// Detailed Profile Section (about me)
+#moreMobile {
+  max-width: 25%;
+  opacity: 0.6;
+  padding: $indent / 2;
+  @extend %btn;
+  @include mq(medium) {
+    align-self: flex-end;
+  }
+  @include mq(large) {
+    display: none;
+  }
+}
 
+#more {
+  display: none;
+  @include mq(large) {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 1.6em 2em;
+    font-size: 1.5em;
+    color: #6b6868;
+    text-shadow: 2px 2px 2px $color-accent;
+    line-height: 0.5em;
+  }
   &:focus,
   &:active {
     border: none;
@@ -84,37 +105,40 @@
   }
 }
 
-
-.my-skills {
+// Skills Section
+#my-skills {
   & .fab,
   & .fas {
-    color: $color-accent;
+    color: $feijoa;
     padding: $indent;
     @include mq(slmedium) {
       font-size: $col-height-xl;
       cursor: pointer;
     }
   }
+  // blend in details about a skill when clicking on item
   & i span {
+    display: flex;
     visibility: hidden;
     position: absolute;
-    width:10em;
-    min-height: $col-height-xl;
+    max-width: 30em;
     color: darken($aqua-forest, 30%);
     background-color: lighten($feijoa, 20%);
     opacity: 95%;
     border-radius: $indent;
     font-family: $font-family--primary;
     font-size:0.2em;
-    text-align: center;
-    padding:5px 8px;
-    margin-left: -7.5em;
+    padding: $indent;
+    margin-left: -$col-height-lg;
   }
 }
 
+// Project section
 .my-projects {
   @include flex($dir: column);
 }
+
+// Contact section
 
 #contact {
   text-align: center;

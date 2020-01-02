@@ -1,7 +1,7 @@
 header {
   @include flex($dir: column);
-  background-color: $color-accent;
-  background-image: linear-gradient($color-accent, $color-accent, $yellow);
+  background-color: $feijoa;
+  background-image: linear-gradient($feijoa, $feijoa, $color-accent);
 }
 
 section {
@@ -15,7 +15,7 @@ section {
   & #profile {
     margin-bottom: 0;
   }
-  & .my-skills {
+  & #my-skills {
     @include grid($gtc: repeat(3, 1fr));
 
     @include mq(slmedium) {

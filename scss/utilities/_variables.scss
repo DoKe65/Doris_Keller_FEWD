@@ -24,20 +24,21 @@ $font-weight--bold    : 700;
 
 // Base Colors
 
-$white        : #fff;
+$white        : #f1f1f1;
 $black        : #242121;
 $grey         : #757a80;
 $ship-cove    : #7477BF;
 $mulled-wine  : #4D4C72;
 $feijoa       : #8dd490;
 $aqua-forest  : #5e9f61;
-$yellow: #efd46b;
+$color-accent  : #efd46b;
+$red          : #ff0000;
 
 // Color Usage
 
-$color-primary  : $ship-cove;
-$color-secundary: $mulled-wine;
-$color-accent   : $feijoa;
+$color-primary  : $feijoa;
+$color-secundary: $aqua-forest;
+$color-accent   : $color-accent;
 
 // Color Palette Modifiers
 
@@ -62,15 +63,6 @@ $color-palettes: (
     base     : $color-primary,
     dark     : darken($color-primary, 20%)
   )
-);
-
-// UI Colors
-
-$ui-colors: (
-	default : $ship-cove,
-	success : $feijoa,
-  cancel  : $grey,
-	info    : $mulled-wine
 );
 
 // Text

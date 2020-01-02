@@ -56,6 +56,7 @@ function createModal(content) {
 // remove modal
 function removeModal(delay) {
   setTimeout( () => document.body.removeChild(intro), delay);
+  window.scrollTo(0, 0);
 }
 
 

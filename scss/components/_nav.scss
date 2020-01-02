@@ -1,6 +1,6 @@
 // Navigation
 #top {
-  background-color: $color-accent;
+  background-color: $feijoa;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -22,10 +22,9 @@ nav {
   }
 }
 
-.hamburger {
+#hamburger {
   width: $indent-lg;
   height: $indent-lg;
-  // background-color: green;
   @include mq(large) {
     display: none;
   }
@@ -39,22 +38,40 @@ nav {
 
 #top-nav {
   display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: $black;
+  width: 100%;
   @include mq(large) {
     display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     margin-left: 0;
     @include flex($dir: row, $just: flex-end);
     max-width: 60%;
-
-  }
+    background: none;
+}
 
   & li {
-    font-size: 1.5em;
+    align-self: center;
+    font-size: 1em;
     padding: $indent;
+    color: $feijoa;
 
     & a:hover,
     &.active a {
       @extend %txt-shadow;
+    }
+
+    @include mq(large) {
+      display: inline-block;
+      font-size: 1.5em;
+      color: inherit;
     }
   }
 }

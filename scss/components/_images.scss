@@ -1,6 +1,11 @@
+// ===========================
+// Graphic and Image Elements
+// ===========================
+
+// Separators
 .separation {
   height: $indent;
-  background-image: linear-gradient($yellow, $yellow, lighten($yellow, 20%), darken($yellow, 10%), lighten($black,10%));
+  background-image: linear-gradient($color-accent, $color-accent, lighten($color-accent, 20%), darken($color-accent, 10%), lighten($black,10%));
   width: 100%;
   text-align: center;
   @include mq(large) {
@@ -8,7 +13,7 @@
   }
   &-2 {
     height: $col-height;
-    background-image: linear-gradient(lighten($black, 10%), darken($yellow, 10%), lighten($yellow, 20%), $yellow, darken($yellow, 10%), lighten($black,10%));
+    background-image: linear-gradient(lighten($black, 10%), darken($color-accent, 10%), lighten($color-accent, 20%), $color-accent, darken($color-accent, 10%), lighten($black,10%));
     width: 100%;
     height: $indent-lg;
     @include mq(large) {
@@ -20,6 +25,7 @@
   }
 }
 
+// Profile Section
 #profile img {
   display: none;
   @include mq(large) {
@@ -27,13 +33,13 @@
     width: $col-height-xxl * 2;
     margin-right: $col-height-xl;
     margin-left: $indent-lg;
-    box-shadow: 0px 0px 20px 4px darken($color-accent, 50%);
+    box-shadow: 0px 0px 20px 4px darken($feijoa, 50%);
     border-radius: 50% 10px;
   }
 }
 
-.my-projects figure {
-
+// Project Section
+.proj-fig {
   position: relative;
 
   & img {
@@ -41,28 +47,100 @@
     border: $aqua-forest 0.1em solid;
     border-radius: $br--round;
     height: 172px;
-    box-shadow: 0 0 24px 8px $color-accent;
+    box-shadow: 0 0 24px 8px $feijoa;
   }
 
-  & figcaption {
+  & details {
     position: absolute;
     bottom: 75%;
     left: 45%;
     width: 70%;
     text-align: right;
-    background: $color-accent;
+    background: $feijoa;
     color: $white;
     opacity: 0.9;
     transform: rotate(-20deg);
     padding-right: $indent;
     border-left: $indent $aqua-forest solid;
+    transition: $trns-duration;
+
+    &[open] {
+      transition: $trns-duration;
+      transform: rotate(360deg);
+      bottom: -10%;
+      left: -5%;
+      width: 110%;
+      opacity: 1;
+      padding: $indent;
+      border-radius: $br--default;
+
+      & summary {
+        list-style-image: url("../img/pointer.svg");
+      }
+    }
+
+    & summary {
+      color: darken($aqua-forest, 30%);
+      font-weight: $font-weight--bold;
+      // list-style: none;
+      list-style-image: url("../img/pointer.svg");
+      text-shadow: 1px 1px 0 $white;
+      &:focus {
+        outline: none;
+      }
+    }
+
+
+
+    & p {
+      color: $white;
+      text-align: center;
+    }
+
+    & .btn-container {
+      @include flex($just: space-between);
+
+      & button {
+        @extend %btn;
+      }
+    }
+
   }
 }
 
-#contact svg {
-  fill: $color-accent;
+  // & img:hover,
+  // & figcaption:hover {
+  //   opacity: 0;
+  // }
 
+  // & .projDetail {
+  //   position: absolute;
+  //   display: flex;
+  // // top: 0;
+  // bottom: 0;
+  // left: $indent-lg;
+  // right: $indent-lg;
+  // // height: 100%;
+  // // width: 100%;
+  // opacity: 1;
+  // transition: .5s ease;
+  // background-color: #008CBA;
+  //   &:hover {
+  //     opacity: 1;
+  //   }
+  //   & p {
+  //     font-size: 0.8em;
+//     }
+//   }
+// }
+
+// Contact section
+
+#contact svg {
+  fill: $feijoa;
 }
+
+// Footer Section
 
 .social-icon svg {
   fill: white;
