@@ -83,7 +83,9 @@ window.addEventListener("scroll", event => {
 
 // Jump without covering section title
 
-const shiftWindow = function() { scrollBy(0, -100) };
+const shiftWindow = function() {
+  scrollBy(0, -100);
+};
 if (location.hash) shiftWindow();
 window.addEventListener("hashchange", shiftWindow);
 

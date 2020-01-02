@@ -90,8 +90,6 @@
       }
     }
 
-
-
     & p {
       color: $white;
       text-align: center;
@@ -100,7 +98,7 @@
     & .btn-container {
       @include flex($just: space-between);
 
-      & button {
+      & .btn {
         @extend %btn;
       }
     }
@@ -108,31 +106,6 @@
   }
 }
 
-  // & img:hover,
-  // & figcaption:hover {
-  //   opacity: 0;
-  // }
-
-  // & .projDetail {
-  //   position: absolute;
-  //   display: flex;
-  // // top: 0;
-  // bottom: 0;
-  // left: $indent-lg;
-  // right: $indent-lg;
-  // // height: 100%;
-  // // width: 100%;
-  // opacity: 1;
-  // transition: .5s ease;
-  // background-color: #008CBA;
-  //   &:hover {
-  //     opacity: 1;
-  //   }
-  //   & p {
-  //     font-size: 0.8em;
-//     }
-//   }
-// }
 
 // Contact section
 
