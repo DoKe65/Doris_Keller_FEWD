@@ -9,6 +9,7 @@ const skills = document.getElementById("skills");
 const projects = document.getElementById("projects");
 const contact = document.getElementById("contact");
 
+const moreMob = document.getElementById("moreMobile");
 const more = document.getElementById("more");
 
 
@@ -18,13 +19,11 @@ const more = document.getElementById("more");
 
 // Mobile Navigation
 
-document.addEventListener("click", (e) => {
-  if (e.target === mobileNav) {
+home.addEventListener("click", (e) => {
+  if (e.target.classList.contains("fa-bars")) {
     if (nav.style.display === "flex") {
-      // navItems.style.display = "none";
       nav.style.display = "none";
     } else {
-      // navItems.style.display = "block";
       nav.style.display = "flex";
     }
   }
@@ -94,27 +93,22 @@ window.addEventListener("hashchange", shiftWindow);
 // ===================
 
 // Mobile
-const moreMob = document.getElementById("moreMobile");
+profile.addEventListener("touchstart", (e) => {
 
-moreMob.addEventListener("touchstart", (e) => {
   if (e.target === moreMob) {
-    if (about.style.display !== "none") {
-      about.style.display = "none";
-      more.innerHTML = "more";
-    }
-  }
-});
 
-moreMob.addEventListener("touchstart", (e) => {
-  if (e.target === moreMob) {
     if (about.style.display === "none") {
       about.style.display = "block";
-      more.innerHTML = "more";
+      moreMob.innerHTML = "less";
+    } else {
+      about.style.display = "none";
+      moreMob.innerHTML = "more";
     }
   }
 });
 
 // Desktop
+
 more.addEventListener("click", (e) => {
   if (e.target === more) {
     if (about.style.display !== "none") {
@@ -129,7 +123,7 @@ more.addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target !== about && e.target !== more) {
+  if (e.target !== about && e.target !== more && e.target !== moreMob) {
     about.style.display = "none";
     more.innerHTML = "more";
   }
@@ -144,8 +138,11 @@ document.addEventListener("click", (e) => {
 skills.addEventListener("click", (e) => {
   if (e.target.classList.contains("fab") || e.target.classList.contains("fas")) {
     let span = e.target.firstChild;
-    span.style.visibility = "visible";
-    // span.classList.toggle("hidden");
+    if (span.style.visibility  === "visible") {
+      span.style.visibility = "hidden";
+    } else {
+      span.style.visibility = "visible";
+    }
   }
 });
 
@@ -159,4 +156,23 @@ document.addEventListener("click", (e) => {
       }
     }
   });
+});
+
+// =====================
+// Project section
+// =====================
+
+// Set the <details> tag to open by clicking on the project image
+
+projects.addEventListener("click", (e) => {
+  if (e.target.tagName === "IMG") {
+    let eFigure = e.target.parentNode;
+    let currentDetails = eFigure.getElementsByTagName("details");
+      currentDetails[0].open = true;
+
+      // Close it by clicking onto the details text
+      eFigure.addEventListener("click", (e) => {
+        currentDetails[0].open = false;
+      });
+  }
 });

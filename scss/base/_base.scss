@@ -16,8 +16,12 @@ body {
   width: 100%;
 }
 
-a {
+a,
+a:visited {
+  color: $color-primary;
+  @include mq(large) {
   color: palette(black, light);
+  }
 }
 
 a:visited {

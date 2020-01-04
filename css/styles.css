@@ -388,8 +388,15 @@ body {
   width: 100%;
 }
 
-a {
-  color: #3f3939;
+a,
+a:visited {
+  color: #8dd490;
+}
+@media (min-width: 1024px) {
+  a,
+a:visited {
+    color: #3f3939;
+  }
 }
 
 a:visited {
@@ -529,19 +536,13 @@ nav {
   }
 }
 
-#hamburger {
-  width: 1.4rem;
-  height: 1.4rem;
-}
 @media (min-width: 1024px) {
   #hamburger {
     display: none;
   }
 }
-#hamburger .line {
-  height: 0.25em;
-  background-color: #242121;
-  margin: 0.25em 0;
+#hamburger .fa-bars {
+  padding: 0.7rem;
 }
 
 #top-nav {
