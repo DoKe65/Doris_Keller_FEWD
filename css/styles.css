@@ -399,10 +399,6 @@ a:visited {
   }
 }
 
-a:visited {
-  color: inherit;
-}
-
 .main {
   max-width: 1200px;
 }
@@ -481,6 +477,12 @@ footer {
     max-width: 1200px;
     margin: 1.4rem auto;
   }
+}
+
+h1,
+h1 a,
+h1 a:visited {
+  color: #3f3939;
 }
 
 h2 {
@@ -720,7 +722,6 @@ nav {
   display: flex;
   visibility: hidden;
   position: absolute;
-  max-width: 30em;
   color: #253f26;
   background-color: #d7f0d8;
   opacity: 95%;
@@ -728,7 +729,18 @@ nav {
   font-family: "Krub", Arial, sans-serif;
   font-size: 0.2em;
   padding: 0.7rem;
-  margin-left: -3.6rem;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  left: 0.7rem;
+  right: 0.7rem;
+}
+@media (min-width: 768px) {
+  #my-skills i span {
+    max-width: 30em;
+    margin-left: -3.6rem;
+    left: unset;
+    right: unset;
+  }
 }
 
 .my-projects {

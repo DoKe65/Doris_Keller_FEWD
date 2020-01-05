@@ -121,7 +121,6 @@
     display: flex;
     visibility: hidden;
     position: absolute;
-    max-width: 30em;
     color: darken($aqua-forest, 30%);
     background-color: lighten($feijoa, 20%);
     opacity: 95%;
@@ -129,7 +128,16 @@
     font-family: $font-family--primary;
     font-size:0.2em;
     padding: $indent;
-    margin-left: -$col-height-lg;
+    margin-left: $indent;
+    margin-right: $indent;
+    left: $indent;
+    right: $indent;
+    @include mq(medium) {
+      max-width: 30em;
+      margin-left: -$col-height-lg;
+      left: unset;
+      right: unset;
+    }
   }
 }
 
