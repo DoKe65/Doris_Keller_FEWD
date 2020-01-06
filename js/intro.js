@@ -45,9 +45,10 @@ function type () {
 
 function createModal(content) {
   let escape = document.createElement("p");
-  escape.innerHTML = "Click or hit éreturnè to skip intro";
+  escape.innerHTML = "Click or hit éreturnè to skip";
   intro.setAttribute("id", "intro-modal");
   intro.style.display = "block";
+  // intro.appendChild(escape);
   intro.appendChild(introCode);
   introCode.setAttribute("id", "typewriter");
   introCode.innerHTML = content;

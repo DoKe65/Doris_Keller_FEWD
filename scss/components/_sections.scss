@@ -132,6 +132,7 @@
     margin-right: $indent;
     left: $indent;
     right: $indent;
+
     @include mq(medium) {
       max-width: 30em;
       margin-left: -$col-height-lg;

@@ -3,6 +3,15 @@
   font-family: "Source Code Pro";
   src: url("../font/SourceCodePro-Regular-modified.otf");
 }
+@keyframes fade {
+  0% {
+    opacity: 1;
+    font-weight: 700;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 #about h3, #profile .role, #top-nav li a:hover, #top-nav li.active a, h3.copyright, p.copyright, h2 {
   color: #efd46b;
   text-shadow: 1px 1px 0.5px #ff0000;
@@ -910,7 +919,9 @@ nav {
   background-color: #242121;
 }
 #intro-modal p {
-  margin-top: 6rem;
+  margin-top: 3.6rem;
+  opacity: 0;
+  animation: fade 15s;
 }
 
 #typewriter {

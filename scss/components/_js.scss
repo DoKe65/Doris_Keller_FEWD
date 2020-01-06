@@ -16,8 +16,11 @@
   overflow: auto;
   background-color: $black;
 
+
   & p {
-    margin-top: $col-height-xl;
+    margin-top: $col-height-lg;
+    opacity: 0;
+    animation: fade 15s;
   }
 }
 

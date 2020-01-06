@@ -1,0 +1,13 @@
+// ===================
+// Keyframes
+// ===================
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    font-weight: $font-weight--bold;
+  }
+  100% {
+    opacity: 0;
+  }
+}
