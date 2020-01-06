@@ -909,6 +909,9 @@ nav {
   overflow: auto;
   background-color: #242121;
 }
+#intro-modal p {
+  margin-top: 6rem;
+}
 
 #typewriter {
   font-size: 1em;

@@ -15,6 +15,10 @@
   height: 100%;
   overflow: auto;
   background-color: $black;
+
+  & p {
+    margin-top: $col-height-xl;
+  }
 }
 
 #typewriter {

@@ -44,11 +44,14 @@ function type () {
 }
 
 function createModal(content) {
-  intro.setAttribute("id", "intro-modal")
+  let escape = document.createElement("p");
+  escape.innerHTML = "Click or hit éreturnè to skip intro";
+  intro.setAttribute("id", "intro-modal");
   intro.style.display = "block";
   intro.appendChild(introCode);
   introCode.setAttribute("id", "typewriter");
   introCode.innerHTML = content;
+  intro.appendChild(escape);
   document.body.appendChild(intro);
   type();
 }
@@ -58,6 +61,7 @@ function removeModal(delay) {
   setTimeout( () => document.body.removeChild(intro), delay);
   window.scrollTo(0, 0);
 }
+
 
 
 // close the modal before code is written completely (skip)
